@@ -1,0 +1,4 @@
+fractol
+*.o
+*.a
+a.out
