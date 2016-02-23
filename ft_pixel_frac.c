@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/22 16:17:07 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/23 13:01:49 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/23 13:34:50 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,4 @@ void	ft_pixel_frac(t_graph *grp, int x, int y)
 	}
 	if (i == 50)
 		mlx_pixel_put(grp->mlx, grp->win, x, y, color);
-	else
-		mlx_pixel_put(grp->mlx, grp->win, x, y, 0x0000FF00);
 }
