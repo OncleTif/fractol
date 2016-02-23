@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/22 14:42:55 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/22 16:16:13 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/23 11:43:38 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_draw_frac(t_graph *grp)
 		x = 0;
 		while (x < grp->width)
 		{
-			ft_pixel_frac(t_graph *grp, int x, int y);
+			ft_pixel_frac(grp, x, y);
 			x++;
 		}
 		y++;

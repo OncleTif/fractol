@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/04 14:31:17 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/12 12:46:21 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/23 11:48:03 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 int	ft_expose(void *obj)
 {
-	ft_draw((t_graph*)obj);
+	ft_draw_frac((t_graph*)obj);
 	return (0);
 }

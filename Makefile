@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/02/22 13:04:38 by tmanet           ###   ########.fr        #
+#    Updated: 2016/02/23 11:46:10 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,9 @@ SRC =   main.c \
 		ft_zoom_opti.c \
 		ft_size_opti.c \
 		ft_projector_iso.c \
-		ft_newnode.c
+		ft_newnode.c \
+		ft_draw_frac.c \
+		ft_pixel_frac.c
 
 
 OBJ = $(SRC:.c=.o)

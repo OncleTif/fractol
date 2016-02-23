@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/01 12:00:23 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/22 16:16:44 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/23 11:33:56 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,4 +100,5 @@ void				ft_line_init(t_node *node1, t_node *node2, t_line *ln);
 t_node				*ft_newnode(int x, int y, int z, t_graph *grp);
 int					ft_limiter(int x, int y, t_graph *grp);
 void				ft_draw_frac(t_graph *grp);
+void				ft_pixel_frac(t_graph *grp, int x, int y);
 #endif
