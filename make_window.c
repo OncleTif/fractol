@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/01 13:15:12 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/23 12:03:21 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/23 12:41:47 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void	make_window(t_list *list)
 	ft_map_builder(list, graph);
 	graph->width = WIDTH;
 	graph->height = HEIGHT;
+	ft_zoom_opti(graph);
 	graph->keymap = ft_key_mapping();
 	graph->mlx = mlx_init();
 	graph->win = mlx_new_window(graph->mlx, graph->width, graph->height, "FDF");

@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/11 14:32:53 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/11 18:16:02 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/23 13:02:49 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,9 @@
 
 void	ft_zoom_opti(t_graph *grp)
 {
-	int	zoom_x;
-	int	zoom_y;
-	int	z_extreme;
-
-	zoom_x = grp->width / ((grp->x_max + grp->y_max) * sqrt(2) / 2);
-	z_extreme = grp->z_max > -grp->z_min ? grp->z_max : -grp->z_min;
-	if (!z_extreme)
-		z_extreme = 1;
-	zoom_y = abs((int)(grp->y_offset / ((sqrt(2) * -z_extreme / sqrt(3)) -
-					(grp->x_mid + grp->y_mid) / sqrt(6))));
-	grp->zoom_opti = zoom_x < zoom_y ? zoom_x * 9 / 10 : zoom_y * 9 / 10;
+	grp->zoom_x = grp->width / (0.6 - -2.1);
+	grp->zoom_y = grp->width / (1.2 - -1.2);
+	grp->zoom_opti = grp->zoom_x < grp->zoom_y ? grp->zoom_x : grp->zoom_y;
 	grp->zoom_step = grp->zoom_opti / 9;
 	if (!grp->zoom_opti)
 		grp->zoom_opti = 1;
