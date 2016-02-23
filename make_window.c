@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/01 13:15:12 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/12 14:20:01 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/23 12:03:21 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,8 @@ void	make_window(t_list *list)
 	if (!(graph = (t_graph*)ft_memalloc(sizeof(t_graph))))
 		ft_error("graph allocation failed");
 	ft_map_builder(list, graph);
-	if (!graph->x_max)
-		ft_error("file does not contain a map");
-	ft_size_opti(graph);
-	graph->x_offset = graph->width / 2;
-	graph->y_offset = graph->height / 2;
-	ft_zoom_opti(graph);
+	graph->width = WIDTH;
+	graph->height = HEIGHT;
 	graph->keymap = ft_key_mapping();
 	graph->mlx = mlx_init();
 	graph->win = mlx_new_window(graph->mlx, graph->width, graph->height, "FDF");
