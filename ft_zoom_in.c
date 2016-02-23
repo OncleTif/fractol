@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/02 18:18:45 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/11 17:29:58 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/23 14:22:19 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_zoom_in(t_graph *graph)
 {
 	graph->zoom = graph->zoom + graph->zoom_step;
-	ft_draw(graph);
+	graph->f(graph);
 }

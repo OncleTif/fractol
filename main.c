@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/01 11:57:48 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/23 12:07:53 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/23 14:17:54 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,23 @@
 
 int	main(int argc, char **argv)
 {
-	t_list	*list;
+	t_graph	*grp;
+	int		i;
 
-	if (argc == 2 && argv)
+	i = 1;
+	grp = NULL;
+	if (argc > 1 && argv)
 	{
-		list = ft_reader(argv[1]);
-		make_window(list);
+		while (i < argc)
+		{
+			grp = make_window(argv[i]);
+			i++;
+		}
+		mlx_loop(grp->mlx);
 	}
 	else
 	{
-		ft_putendl("You must define an argment in :");
-		ft_putendl("mandel,");
+		ft_putendl("You must define an argment in :\nmandel,");
 	}
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/01 12:00:23 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/23 13:33:27 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/23 14:13:10 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ typedef struct		s_graph
 	int				y_mid;
 	int				z_min;
 	int				z_max;
+	void			(*f)(struct s_graph*);
 }					t_graph;
 
 typedef struct		s_line
@@ -78,7 +79,7 @@ typedef	struct		s_keymap
 t_keymap			*ft_keymapnew(int key, t_keymap *nxt, void (*f)(t_graph*));
 t_keymap			*ft_key_mapping(void);
 t_list				*ft_reader(char *str);
-void				make_window(t_list *list);
+t_graph				*make_window(char *str);
 void				ft_draw(t_graph *graph);
 void				ft_zoom_in(t_graph *graph);
 void				ft_zoom_out(t_graph *graph);

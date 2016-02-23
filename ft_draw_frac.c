@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/22 14:42:55 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/23 11:43:38 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/23 14:19:50 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	ft_draw_frac(t_graph *grp)
 	int	y;
 	int	x;
 
+	mlx_clear_window(grp->mlx, grp->win);
 	y = 0;
 	while (y < grp->height)
 	{
