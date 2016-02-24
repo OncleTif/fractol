@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/01 13:15:12 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/24 16:10:54 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/24 17:06:20 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ t_graph	*make_window(char *str)
 {
 	t_graph	*graph;
 
-	if (!(graph = (t_graph*)ft_memalloc(sizeof(t_graph))) && str)
+	if (!(graph = (t_graph*)ft_memalloc(sizeof(t_graph))))
 		ft_error("graph allocation failed");
 //	ft_map_builder(list, graph);
-	graph->f = &ft_draw_frac;
+	graph->f = &ft_pixel_mendel;
 	graph->width = WIDTH;
 	graph->height = HEIGHT;
 	graph->x_mid = graph->width / 2;
@@ -29,7 +29,7 @@ t_graph	*make_window(char *str)
 	ft_zoom_opti(graph);
 	graph->keymap = ft_key_mapping();
 	graph->mlx = mlx_init();
-	graph->win = mlx_new_window(graph->mlx, graph->width, graph->height, "FDF");
+	graph->win = mlx_new_window(graph->mlx, graph->width, graph->height, str);
 	mlx_key_hook(graph->win, &ft_get_key, graph);
 	mlx_hook(graph->win, BUTTON_NOTIFY, BUTTON1_MOTION_MASK, &ft_get_mouse, graph);
 	mlx_expose_hook(graph->win, &ft_expose, graph);

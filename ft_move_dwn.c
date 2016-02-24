@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/04 15:39:23 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/23 14:20:20 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/24 16:57:50 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_move_dwn(t_graph *grp)
 {
 	grp->y_offset = grp->y_offset + 5;
-	grp->f(grp);
+	ft_draw_frac(grp);
 }

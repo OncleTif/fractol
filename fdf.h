@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/01 12:00:23 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/24 16:10:50 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/24 17:04:56 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ typedef struct		s_graph
 	int				y_mid;
 	int				z_min;
 	int				z_max;
-	void			(*f)(struct s_graph*);
+	void			(*f)(struct s_graph*, int, int);
 }					t_graph;
 
 typedef struct		s_line
@@ -107,6 +107,6 @@ void				ft_line_init(t_node *node1, t_node *node2, t_line *ln);
 t_node				*ft_newnode(int x, int y, int z, t_graph *grp);
 int					ft_limiter(int x, int y, t_graph *grp);
 void				ft_draw_frac(t_graph *grp);
-void				ft_pixel_frac(t_graph *grp, int x, int y);
+void				ft_pixel_mendel(t_graph *grp, int x, int y);
 int					ft_get_mouse(int btn, int x, int y, void *obj);
 #endif

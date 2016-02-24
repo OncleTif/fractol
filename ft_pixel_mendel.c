@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_pixel_frac.c                                    :+:      :+:    :+:   */
+/*   ft_pixel_mendel.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/22 16:17:07 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/24 15:35:02 by tmanet           ###   ########.fr       */
+/*   Created: 2016/02/24 17:04:01 by tmanet            #+#    #+#             */
+/*   Updated: 2016/02/24 17:04:10 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-void	ft_pixel_frac(t_graph *grp, int x, int y)
+void	ft_pixel_mendel(t_graph *grp, int x, int y)
 {
 	int		color;
 	double	c_r;
