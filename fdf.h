@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/01 12:00:23 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/23 14:13:10 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/23 15:35:41 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,10 @@ typedef struct		s_node
 typedef struct		s_graph
 {
 	int				width;
-	int				zoom;
+	double			zoom;
 	double			zoom_x;
 	double			zoom_y;
-	int				zoom_opti;
+	double			zoom_opti;
 	int				zoom_step;
 	int				height;
 	int				x_offset;
