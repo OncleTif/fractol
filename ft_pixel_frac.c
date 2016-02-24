@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/22 16:17:07 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/24 11:26:56 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/24 11:47:14 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ void	ft_pixel_frac(t_graph *grp, int x, int y)
 	z_r = 0;
 	z_i = 0;
 	i = 0;
-	c_r = (x - grp->x_offset) / grp->zoom - 2.1 + grp->x_offset;
-	c_i = (y - grp->y_offset) / grp->zoom - 1.2 + grp->y_offset;
+	c_r = (x) / grp->zoom - 2.1;
+	c_i = (y) / grp->zoom - 1.2;
 	color = 0x00FF0000;
 	while ((z_r * z_r + z_i * z_i < 4) && i < grp->zoom)
 	{
@@ -36,6 +36,6 @@ void	ft_pixel_frac(t_graph *grp, int x, int y)
 		i++;
 	}
 	if (i >= grp->zoom)
-		mlx_pixel_put(grp->mlx, grp->win, x + grp->x_offset,
-				y + grp->y_offset, color);
+		mlx_pixel_put(grp->mlx, grp->win, x + grp->x_offset - grp->x_mid,
+				y + grp->y_offset - grp->y_mid, color);
 }
