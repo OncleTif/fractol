@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/01 12:00:23 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/23 15:35:41 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/24 16:10:50 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@
 # include "libft/libft.h"
 # define HEIGHT 500
 # define WIDTH 500
+# define BUTTON_NOTIFY 4
+# define MOTION_NOTIFY 6
+# define POINTER_MOTION_MASK (1L<<6)
+# define BUTTON1_MOTION_MASK (1L<<8)
 
 typedef struct		s_node
 {
@@ -104,4 +108,5 @@ t_node				*ft_newnode(int x, int y, int z, t_graph *grp);
 int					ft_limiter(int x, int y, t_graph *grp);
 void				ft_draw_frac(t_graph *grp);
 void				ft_pixel_frac(t_graph *grp, int x, int y);
+int					ft_get_mouse(int btn, int x, int y, void *obj);
 #endif
