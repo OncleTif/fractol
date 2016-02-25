@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/02/25 18:47:34 by tmanet           ###   ########.fr        #
+#    Updated: 2016/02/25 19:02:05 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,5 +71,8 @@ fclean: clean
 
 re: fclean all
 
+norme:
+	@make -C libft norme
+	@norminette $(SRC) fractol.h
 test: $(NAME)
 	./$(NAME) mendel
