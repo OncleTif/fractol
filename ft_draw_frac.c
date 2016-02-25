@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/22 14:42:55 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/24 17:26:17 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/25 17:58:01 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ void	ft_draw_frac(t_graph *grp)
 		x = 0;
 		while (x < grp->width)
 		{
-			grp->f(grp, x + grp->x_mid - grp->x_offset,
-					y + grp->y_mid - grp->y_offset);
+			grp->f(grp, x, y);
 			x++;
 		}
 		y++;
 	}
+	ft_print_origin(grp);
 }

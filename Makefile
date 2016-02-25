@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/02/24 17:24:08 by tmanet           ###   ########.fr        #
+#    Updated: 2016/02/25 18:47:34 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,8 +22,8 @@ MINILIBX = -lmlx -framework OpenGL -framework AppKit
 
 SRC =   main.c \
 		make_window.c \
-		ft_draw_line.c \
 		ft_print_key.c \
+		ft_print_origin.c \
 		ft_get_key.c \
 		ft_get_mouse.c \
 		ft_expose.c \
@@ -34,12 +34,10 @@ SRC =   main.c \
 		ft_key_mapping.c \
 		ft_keymapnew.c \
 		ft_origin.c \
-		ft_line_init.c \
 		ft_zoom_in.c \
 		ft_zoom_out.c \
 		ft_text.c \
 		ft_zoom_opti.c \
-		ft_size_opti.c \
 		ft_draw_frac.c \
 		ft_pixel_mendel.c
 
@@ -72,3 +70,6 @@ fclean: clean
 	@echo "suppression de $(NAME)"
 
 re: fclean all
+
+test: $(NAME)
+	./$(NAME) mendel
