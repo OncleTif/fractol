@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 18:50:07 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/25 18:50:30 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/25 19:34:02 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,12 @@
 # define MOTION_NOTIFY 6
 # define POINTER_MOTION_MASK (1L<<6)
 # define BUTTON1_MOTION_MASK (1L<<8)
+
+typedef union		u_color
+{
+	unsigned int	color;
+	unsigned char	rgb[4];
+}					t_color;
 
 typedef struct		s_graph
 {
@@ -43,6 +49,9 @@ typedef struct		s_graph
 	int				y_mid;
 	int				z_min;
 	int				z_max;
+	int				iter;
+	t_color			color_min;
+	t_color			color_max;
 	void			(*f)(struct s_graph*, int, int);
 }					t_graph;
 
@@ -73,4 +82,5 @@ void				ft_draw_frac(t_graph *grp);
 void				ft_pixel_mendel(t_graph *grp, int x, int y);
 int					ft_get_mouse(int btn, int x, int y, void *obj);
 void				ft_print_origin(t_graph *grp);
+int					ft_color(int iter, t_graph *grp);
 #endif

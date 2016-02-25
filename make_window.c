@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/01 13:15:12 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/24 17:33:29 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/25 19:40:22 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,9 @@ t_graph	*make_window(char *str)
 	grp->y_mid = grp->height / 2;
 	grp->x_offset = grp->x_mid;
 	grp->y_offset = grp->y_mid;
+	grp->iter = 50;
+	grp->color_min.color = 0x003333FF;
+	grp->color_max.color = 0x00FF3333;
 	ft_zoom_opti(grp);
 	grp->keymap = ft_key_mapping();
 	grp->mlx = mlx_init();
