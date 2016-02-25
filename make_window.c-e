@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractol.h"
+#include "fdf.h"
 
 t_graph	*make_window(char *str)
 {

@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_get_key.c                                       :+:      :+:    :+:   */
+/*   ft_draw_frac.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/01 16:17:53 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/04 15:55:08 by tmanet           ###   ########.fr       */
+/*   Created: 2016/02/22 14:42:55 by tmanet            #+#    #+#             */
+/*   Updated: 2016/02/25 17:58:01 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractol.h"
+#include "fdf.h"
 
-int	ft_get_key(int key, void *obj)
+void	ft_draw_frac(t_graph *grp)
 {
-	t_graph		*grp;
-	t_keymap	*keymap;
+	int	y;
+	int	x;
 
-	grp = (t_graph*)obj;
-	keymap = grp->keymap;
-	if (key == 53)
+	mlx_clear_window(grp->mlx, grp->win);
+	ft_putnbrendl(grp->zoom);
+	ft_putnbrendl(grp->x_offset);
+	ft_putnbrendl(grp->y_offset);
+	y = 0;
+	while (y < grp->height)
 	{
-		mlx_destroy_window(grp->mlx, grp->win);
-		exit(0);
+		x = 0;
+		while (x < grp->width)
+		{
+			grp->f(grp, x, y);
+			x++;
+		}
+		y++;
 	}
-	while (keymap && keymap->key != key)
-		keymap = keymap->next;
-	if (keymap)
-		keymap->f(grp);
-	else
-		ft_print_key(key);
-	return (0);
+	ft_print_origin(grp);
 }

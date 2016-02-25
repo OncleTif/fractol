@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fdf.h"
+#include "fractol.h"
 
 t_keymap	*ft_keymapnew(int key, t_keymap *nxt, void (*f)(t_graph*))
 {

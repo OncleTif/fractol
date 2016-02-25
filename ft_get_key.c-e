@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractol.h"
+#include "fdf.h"
 
 int	ft_get_key(int key, void *obj)
 {

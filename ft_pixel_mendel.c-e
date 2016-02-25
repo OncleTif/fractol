@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractol.h"
+#include "fdf.h"
 
 void	ft_pixel_mendel(t_graph *grp, int x, int y)
 {

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractol.h"
+#include "fdf.h"
 
 void	ft_print_origin(t_graph *grp)
 {

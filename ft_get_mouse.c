@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fdf.h"
+#include "fractol.h"
 
 int	ft_get_mouse(int btn, int x, int y, void *obj)
 {
