@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/02/25 19:30:35 by tmanet           ###   ########.fr        #
+#    Updated: 2016/03/02 11:46:32 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,7 @@ SRC =   main.c \
 		ft_zoom_opti.c \
 		ft_draw_frac.c \
 		ft_color.c \
+		ft_pixel_julia.c \
 		ft_pixel_mendel.c
 
 
