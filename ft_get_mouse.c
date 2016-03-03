@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/12 17:05:38 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/03 12:08:57 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/03 13:40:17 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,10 @@ int	ft_get_mouse(int btn, int x, int y, void *obj)
 	grp->y_mid = y;
 	grp->x_off_fct = (x + grp->x_mid - grp->x_offset) / grp->zoom - 2.1 * grp->zoom / grp->zoom_opti + grp->x_off_fct;
 	grp->y_off_fct = (y + grp->y_mid - grp->y_offset) / grp->zoom - 1.2 * grp->zoom / grp->zoom_opti + grp->y_off_fct;
+	ft_putstr("origine fct :");
+	ft_putnbr(grp->x_off_fct * 1000);
+	ft_putstr(",");
+	ft_putnbrendl(grp->y_off_fct * 1000);
 	ft_putnbr(btn);
 	//if (btn == 4)
 	if (btn == 1)
