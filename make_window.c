@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/01 13:15:12 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/02 11:46:57 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/03 12:03:03 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_graph	*make_window(char *str)
 
 	if (!(grp = (t_graph*)ft_memalloc(sizeof(t_graph))))
 		ft_error("grp allocation failed");
-	grp->f = &ft_pixel_julia;
+	grp->f = &ft_pixel_mendel;
 	grp->width = WIDTH;
 	grp->height = HEIGHT;
 	grp->x_mid = grp->width / 2;
