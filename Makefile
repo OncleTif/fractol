@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/03/05 15:53:53 by tmanet           ###   ########.fr        #
+#    Updated: 2016/03/05 18:05:11 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,8 @@ SRC =   main.c \
 		ft_origin.c \
 		ft_zoom_in.c \
 		ft_zoom_out.c \
+		ft_zoom_step_increase.c \
+		ft_zoom_step_decrease.c \
 		ft_text.c \
 		ft_zoom_opti.c \
 		ft_draw_frac.c \

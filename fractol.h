@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 18:50:07 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/05 15:39:00 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/05 18:07:36 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,8 @@ void				ft_pixel_julia(t_graph *grp, int x, int y);
 int					ft_get_mouse(int btn, int x, int y, void *obj);
 void				ft_print_origin(t_graph *grp);
 void				ft_mendel_init(t_graph *grp);
+void				ft_zoom_step_increase(t_graph *grp);
+void				ft_zoom_step_decrease(t_graph *grp);
 void				ft_coordinate(t_graph *grp, int x, int y);
 int					ft_color(int iter, t_graph *grp);
 #endif
