@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/22 14:42:55 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/05 16:52:27 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/05 18:32:27 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,5 @@ void	ft_draw_frac(t_graph *grp)
 	ft_putnbr(grp->x_orig);
 	ft_putstr(",");
 	ft_putnbrendl(grp->y_orig);
+	ft_putnbrendl(grp->iter);
 }

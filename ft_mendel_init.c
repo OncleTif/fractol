@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/05 15:07:51 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/05 18:15:35 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/05 18:24:33 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	ft_mendel_init(t_graph *grp)
 	grp->height = HEIGHT;
 	grp->x_orig = grp->width / 2;
 	grp->y_orig = grp->height / 2;
+	grp->iter_init = 50;
 	grp->iter = 50;
 	grp->color_min.color = 0x003333FF;
 	grp->color_max.color = 0x00FF3333;

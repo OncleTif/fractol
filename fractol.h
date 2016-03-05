@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 18:50:07 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/05 18:07:36 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/05 18:24:03 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ typedef struct		s_graph
 	int				z_min;
 	int				z_max;
 	int				iter;
+	int				iter_init;
 	t_color			color_min;
 	t_color			color_max;
 	void			(*f)(struct s_graph*, int, int);
