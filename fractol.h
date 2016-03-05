@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 18:50:07 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/03 11:56:46 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/05 15:39:00 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,17 +31,17 @@ typedef union		u_color
 
 typedef struct		s_graph
 {
-	int				width;
 	double			zoom;
-	double			zoom_x;
-	double			zoom_y;
-	double			x_off_fct;
-	double			y_off_fct;
+	double			r_orig;
+	double			i_orig;
+	double			c_r;
+	double			c_i;
 	double			zoom_opti;
 	int				zoom_step;
+	int				width;
 	int				height;
-	int				x_offset;
-	int				y_offset;
+	int				x_orig;
+	int				y_orig;
 	struct s_keymap	*keymap;
 	void			*mlx;
 	void			*win;
@@ -85,5 +85,7 @@ void				ft_pixel_mendel(t_graph *grp, int x, int y);
 void				ft_pixel_julia(t_graph *grp, int x, int y);
 int					ft_get_mouse(int btn, int x, int y, void *obj);
 void				ft_print_origin(t_graph *grp);
+void				ft_mendel_init(t_graph *grp);
+void				ft_coordinate(t_graph *grp, int x, int y);
 int					ft_color(int iter, t_graph *grp);
 #endif

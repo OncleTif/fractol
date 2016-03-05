@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/24 17:04:01 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/03 12:02:17 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/05 15:39:17 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	ft_pixel_mendel(t_graph *grp, int x, int y)
 {
-	double	c_r;
-	double	c_i;
 	double	z_r;
 	double	z_i;
 	double	tmp;
@@ -24,13 +22,12 @@ void	ft_pixel_mendel(t_graph *grp, int x, int y)
 	z_r = 0;
 	z_i = 0;
 	i = 0;
-	c_r = (x + grp->x_mid - grp->x_offset) / grp->zoom - 2.1 * grp->zoom / grp->zoom_opti + grp->x_off_fct;
-	c_i = (y + grp->y_mid - grp->y_offset) / grp->zoom - 1.2 * grp->zoom / grp->zoom_opti + grp->y_off_fct;
+	ft_coordinate(grp, x, y);
 	while ((z_r * z_r + z_i * z_i < 4) && i < grp->iter)
 	{
 		tmp = z_r;
-		z_r = z_r * z_r - z_i * z_i + c_r;
-		z_i = 2 * z_i * tmp + c_i;
+		z_r = z_r * z_r - z_i * z_i + grp->c_r;
+		z_i = 2 * z_i * tmp + grp->c_i;
 		i++;
 	}
 		mlx_pixel_put(grp->mlx, grp->win, x, y, ft_color(i, grp));
