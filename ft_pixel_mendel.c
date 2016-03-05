@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/24 17:04:01 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/05 15:39:17 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/05 20:32:14 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ void	ft_pixel_mendel(t_graph *grp, int x, int y)
 		z_i = 2 * z_i * tmp + grp->c_i;
 		i++;
 	}
-		mlx_pixel_put(grp->mlx, grp->win, x, y, ft_color(i, grp));
+	mlx_pixel_put(grp->mlx, grp->win, x, y, ft_color(i, grp));
 }
