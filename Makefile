@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/03/05 18:05:11 by tmanet           ###   ########.fr        #
+#    Updated: 2016/03/05 20:28:50 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,11 @@ SRC =   main.c \
 		ft_move_rgt.c \
 		ft_move_up.c \
 		ft_key_mapping.c \
+		ft_key_mapping_mendel.c \
+		ft_key_mapping_julia.c \
 		ft_keymapnew.c \
+		ft_origin_julia.c \
+		ft_origin_mendel.c \
 		ft_origin.c \
 		ft_zoom_in.c \
 		ft_zoom_out.c \
@@ -45,6 +49,7 @@ SRC =   main.c \
 		ft_pixel_julia.c \
 		ft_coordinate.c \
 		ft_mendel_init.c \
+		ft_julia_init.c \
 		ft_pixel_mendel.c
 
 
@@ -82,3 +87,7 @@ norme:
 	@norminette $(SRC) fractol.h
 test: $(NAME)
 	./$(NAME) mendel
+mendel: $(NAME)
+	./$(NAME) mendel
+julia: $(NAME)
+	./$(NAME) julia

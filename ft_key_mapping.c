@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_key_lister.c                                    :+:      :+:    :+:   */
+/*   ft_key_mapping.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/01 17:27:51 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/05 18:09:10 by tmanet           ###   ########.fr       */
+/*   Created: 2016/03/05 20:26:28 by tmanet            #+#    #+#             */
+/*   Updated: 2016/03/05 20:27:44 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-t_keymap	*ft_key_mapping(void)
+t_keymap	*ft_key_mapping(int type)
 {
 	t_keymap	*elem;
 
@@ -27,5 +27,9 @@ t_keymap	*ft_key_mapping(void)
 	elem = ft_keymapnew(124, elem, &ft_move_rgt);
 	elem = ft_keymapnew(125, elem, &ft_move_dwn);
 	elem = ft_keymapnew(126, elem, &ft_move_up);
+	if (type == JULIA)
+		elem = ft_key_mapping_julia(elem);
+	else if (type == MENDEL)
+		elem = ft_key_mapping_mendel(elem);
 	return (elem);
 }

@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 18:50:07 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/05 18:24:03 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/05 20:22:22 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include "libft/libft.h"
 # define HEIGHT 500
 # define WIDTH 500
+# define JULIA 1
+# define MENDEL 0
 # define BUTTON_NOTIFY 4
 # define MOTION_NOTIFY 6
 # define POINTER_MOTION_MASK (1L<<6)
@@ -33,6 +35,10 @@ typedef struct		s_graph
 {
 	double			zoom;
 	double			r_orig;
+	double			r_min;
+	double			r_max;
+	double			i_min;
+	double			i_max;
 	double			i_orig;
 	double			c_r;
 	double			c_i;
@@ -66,7 +72,9 @@ typedef	struct		s_keymap
 }					t_keymap;
 
 t_keymap			*ft_keymapnew(int key, t_keymap *nxt, void (*f)(t_graph*));
-t_keymap			*ft_key_mapping(void);
+t_keymap			*ft_key_mapping(int type);
+t_keymap			*ft_key_mapping_julia(t_keymap *km);
+t_keymap			*ft_key_mapping_mendel(t_keymap *km);
 t_graph				*make_window(char *str);
 void				ft_zoom_in(t_graph *graph);
 void				ft_zoom_out(t_graph *graph);
@@ -76,6 +84,8 @@ void				ft_move_lft(t_graph *graph);
 void				ft_move_rgt(t_graph *graph);
 void				ft_move_up(t_graph *graph);
 void				ft_origin(t_graph *graph);
+void				ft_origin_mendel(t_graph *graph);
+void				ft_origin_julia(t_graph *graph);
 void				ft_print_key(int key);
 void				ft_text(t_graph *grp);
 int					ft_get_key(int key, void *obj);
@@ -87,6 +97,7 @@ void				ft_pixel_julia(t_graph *grp, int x, int y);
 int					ft_get_mouse(int btn, int x, int y, void *obj);
 void				ft_print_origin(t_graph *grp);
 void				ft_mendel_init(t_graph *grp);
+void				ft_julia_init(t_graph *grp);
 void				ft_zoom_step_increase(t_graph *grp);
 void				ft_zoom_step_decrease(t_graph *grp);
 void				ft_coordinate(t_graph *grp, int x, int y);

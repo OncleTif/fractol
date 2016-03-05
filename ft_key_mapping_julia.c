@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_color.c                                         :+:      :+:    :+:   */
+/*   ft_key_mapping_julia.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/25 19:08:08 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/05 18:56:31 by tmanet           ###   ########.fr       */
+/*   Created: 2016/03/05 20:18:15 by tmanet            #+#    #+#             */
+/*   Updated: 2016/03/05 20:20:48 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-int	ft_color(int iter, t_graph *grp)
+t_keymap	*ft_key_mapping_julia(t_keymap *elem)
 {
-	t_color	color;
-	int		i;
-
-	i = 0;
-	while (i < 4)
-	{
-		color.rgb[i] = (grp->color_max.rgb[i] * iter / grp->iter
-			+ grp->color_min.rgb[i] * (grp->iter - iter) / grp->iter);
-		i++;
-	}
-	return (color.color);
+	elem = ft_keymapnew(69, elem, &ft_zoom_in);
+	elem = ft_keymapnew(78, elem, &ft_zoom_out);
+	elem = ft_keymapnew(67, elem, &ft_zoom_step_increase);
+	elem = ft_keymapnew(75, elem, &ft_zoom_step_decrease);
+	elem = ft_keymapnew(87, elem, &ft_origin_julia);
+	return (elem);
 }
