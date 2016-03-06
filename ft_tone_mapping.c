@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_zoom_in.c                                       :+:      :+:    :+:   */
+/*   ft_tone_mapping.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/02 18:18:45 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/06 19:29:58 by tmanet           ###   ########.fr       */
+/*   Created: 2016/03/06 19:27:35 by tmanet            #+#    #+#             */
+/*   Updated: 2016/03/06 20:19:11 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-void	ft_zoom_in(t_graph *grp)
+void	ft_tone_mapping(t_graph *grp)
 {
-	if (grp->zoom < INT_MAX - grp->zoom_step)
-	{
-		grp->zoom = grp->zoom + grp->zoom_step;
-		if (grp->zoom > grp->zoom_opti)
-			grp->iter = grp->zoom / 3 < grp->zoom_opti ?
-				grp->iter_init * grp->zoom / grp->zoom_opti
-				: 3 * grp->iter_init;
-		else
-			grp->iter = grp->iter_init;
-		ft_draw_frac(grp);
-	}
+	grp->tone = ft_tonenew(0x0000FF00, grp->tone);
+	grp->tone = ft_tonenew(0x000BAA55, grp->tone);
+	grp->tone = ft_tonenew(0x001755AA, grp->tone);
+	grp->tone = ft_tonenew(0x002200FF, grp->tone);
+	grp->tone = ft_tonenew(0x00770080, grp->tone);
+	grp->tone = ft_tonenew(0x00CC0000, grp->tone);
+	grp->tone = ft_tonenew(0x00000000, grp->tone);
+	grp->tone_step = 20;
 }

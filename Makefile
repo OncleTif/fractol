@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/03/06 19:06:04 by tmanet           ###   ########.fr        #
+#    Updated: 2016/03/06 20:17:28 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,7 @@ SRC =   main.c \
 		ft_key_mapping_julia.c \
 		ft_keymapnew.c \
 		ft_origin_julia.c \
+		ft_origin_bunny.c \
 		ft_origin_mendel.c \
 		ft_origin.c \
 		ft_zoom_in.c \
@@ -47,7 +48,10 @@ SRC =   main.c \
 		ft_zoom_opti.c \
 		ft_draw_frac.c \
 		ft_color.c \
+		ft_color_step.c \
 		ft_blocker.c \
+		ft_tonenew.c \
+		ft_tone_mapping.c \
 		ft_pixel_julia.c \
 		ft_coordinate.c \
 		ft_mendel_init.c \
@@ -90,10 +94,10 @@ norme:
 	@make -C libft norme
 	@norminette $(SRC) fractol.h
 test: $(NAME)
-	./$(NAME) mendel
+	./$(NAME) mandel
 
-mendel: $(NAME)
-	./$(NAME) mendel
+mandel: $(NAME)
+	./$(NAME) mandel
 
 julia: $(NAME)
 	./$(NAME) julia

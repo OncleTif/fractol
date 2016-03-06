@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/01 13:15:12 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/06 19:10:44 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/06 20:01:03 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ t_graph	*make_window(char *str)
 	else
 		ft_error("You must define an argment in :\nmandel, julia, bunny");
 	grp->keymap = ft_key_mapping();
+	ft_tone_mapping(grp);
+	grp->f_color = &ft_color_step;
 	grp->mlx = mlx_init();
 	grp->win = mlx_new_window(grp->mlx, grp->width, grp->height, str);
 	mlx_key_hook(grp->win, &ft_get_key, grp);

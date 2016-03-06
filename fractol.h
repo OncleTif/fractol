@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 18:50:07 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/06 19:04:19 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/06 20:17:03 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,12 @@ typedef union		u_color
 	unsigned char	rgb[4];
 }					t_color;
 
+typedef struct		s_tone
+{
+	t_color			color;
+	struct s_tone	*next;
+}					t_tone;
+
 typedef struct		s_graph
 {
 	double			zoom;
@@ -53,6 +59,8 @@ typedef struct		s_graph
 	int				x_orig;
 	int				y_orig;
 	struct s_keymap	*keymap;
+	t_tone			*tone;
+	int				tone_step;
 	void			*mlx;
 	void			*win;
 	int				x_max;
@@ -66,6 +74,7 @@ typedef struct		s_graph
 	t_color			color_min;
 	t_color			color_max;
 	void			(*f)(struct s_graph*, int, int);
+	int				(*f_color)(int, struct s_graph*);
 	void			(*f_origin)(struct s_graph*);
 	void			(*f_motion)(struct s_graph*, int, int);
 }					t_graph;
@@ -92,6 +101,7 @@ void				ft_move_up(t_graph *graph);
 void				ft_origin(t_graph *graph);
 void				ft_origin_mendel(t_graph *graph);
 void				ft_origin_julia(t_graph *graph);
+void				ft_origin_bunny(t_graph *graph);
 void				ft_print_key(int key);
 void				ft_text(t_graph *grp);
 int					ft_get_key(int key, void *obj);
@@ -112,4 +122,7 @@ void				ft_zoom_step_increase(t_graph *grp);
 void				ft_zoom_step_decrease(t_graph *grp);
 void				ft_coordinate(t_graph *grp, int x, int y);
 int					ft_color(int iter, t_graph *grp);
+int					ft_color_step(int iter, t_graph *grp);
+t_tone				*ft_tonenew(int color, t_tone *nxt);
+void				ft_tone_mapping(t_graph *grp);
 #endif
