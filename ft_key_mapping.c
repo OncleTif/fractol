@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/05 20:26:28 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/06 16:46:31 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/06 19:05:35 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,6 @@ t_keymap	*ft_key_mapping(void)
 	elem = ft_keymapnew(67, elem, &ft_zoom_step_increase);
 	elem = ft_keymapnew(75, elem, &ft_zoom_step_decrease);
 	elem = ft_keymapnew(87, elem, &ft_origin);
+	elem = ft_keymapnew(1, elem, &ft_blocker);
 	return (elem);
 }

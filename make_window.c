@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/01 13:15:12 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/06 18:09:17 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/06 18:44:46 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ t_graph	*make_window(char *str)
 		ft_mendel_init(grp);
 	else if (ft_strequ(str, "julia"))
 		ft_julia_init(grp);
+	else if (ft_strequ(str, "bunny"))
+		ft_bunny_init(grp);
 	else
 		ft_mendel_init(grp);
 	grp->keymap = ft_key_mapping();

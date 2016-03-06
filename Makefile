@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/03/06 17:50:28 by tmanet           ###   ########.fr        #
+#    Updated: 2016/03/06 19:06:04 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,10 +47,12 @@ SRC =   main.c \
 		ft_zoom_opti.c \
 		ft_draw_frac.c \
 		ft_color.c \
+		ft_blocker.c \
 		ft_pixel_julia.c \
 		ft_coordinate.c \
 		ft_mendel_init.c \
 		ft_julia_init.c \
+		ft_bunny_init.c \
 		ft_julia_modifier.c \
 		ft_pixel_mendel.c
 
@@ -89,7 +91,12 @@ norme:
 	@norminette $(SRC) fractol.h
 test: $(NAME)
 	./$(NAME) mendel
+
 mendel: $(NAME)
 	./$(NAME) mendel
+
 julia: $(NAME)
 	./$(NAME) julia
+
+bunny: $(NAME)
+	./$(NAME) bunny

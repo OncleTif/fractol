@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 18:50:07 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/06 18:25:33 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/06 19:04:19 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ typedef struct		s_graph
 	double			i_orig;
 	double			c_r;
 	double			c_i;
+	double			julia_r;
+	double			julia_i;
 	double			zoom_opti;
 	int				zoom_step;
 	int				width;
@@ -104,6 +106,8 @@ int					ft_get_motion(int x, int y, void *obj);
 void				ft_print_origin(t_graph *grp);
 void				ft_mendel_init(t_graph *grp);
 void				ft_julia_init(t_graph *grp);
+void				ft_bunny_init(t_graph *grp);
+void				ft_blocker(t_graph *grp);
 void				ft_zoom_step_increase(t_graph *grp);
 void				ft_zoom_step_decrease(t_graph *grp);
 void				ft_coordinate(t_graph *grp, int x, int y);
