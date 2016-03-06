@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 18:50:07 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/06 20:37:59 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/06 20:50:04 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,6 +118,7 @@ void				ft_mendel_init(t_graph *grp);
 void				ft_julia_init(t_graph *grp);
 void				ft_bunny_init(t_graph *grp);
 void				ft_blocker(t_graph *grp);
+void				ft_change_color(t_graph *grp);
 void				ft_color_step_plus(t_graph *grp);
 void				ft_color_step_minus(t_graph *grp);
 void				ft_zoom_step_increase(t_graph *grp);

@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/06 19:27:35 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/06 20:26:55 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/06 20:49:02 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ void	ft_tone_mapping(t_graph *grp)
 	grp->tone = ft_tonenew(0x00770080, grp->tone);
 	grp->tone = ft_tonenew(0x00CC0000, grp->tone);
 	grp->tone = ft_tonenew(0x00000000, grp->tone);
-	grp->tone_step = 10;
+	grp->tone_step = 3;
 }
