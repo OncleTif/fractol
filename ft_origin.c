@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/04 17:36:31 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/05 16:02:47 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/06 16:48:58 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 void	ft_origin(t_graph *grp)
 {
-	ft_mendel_init(grp);
-	ft_draw_frac(grp);
+	grp->f_origin(grp);
 }

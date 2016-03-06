@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/01 13:15:12 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/05 20:37:01 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/06 16:47:42 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ t_graph	*make_window(char *str)
 		ft_julia_init(grp);
 	else
 		ft_mendel_init(grp);
+	grp->keymap = ft_key_mapping();
 	grp->mlx = mlx_init();
 	grp->win = mlx_new_window(grp->mlx, grp->width, grp->height, str);
 	mlx_key_hook(grp->win, &ft_get_key, grp);
