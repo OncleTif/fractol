@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 18:50:07 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/06 17:49:34 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/06 18:25:33 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,6 @@ typedef struct		s_graph
 	void			(*f)(struct s_graph*, int, int);
 	void			(*f_origin)(struct s_graph*);
 	void			(*f_motion)(struct s_graph*, int, int);
-	int				(*f_mouse)(int, int, int, void*);
 }					t_graph;
 
 typedef	struct		s_keymap

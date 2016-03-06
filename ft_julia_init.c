@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/05 19:26:27 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/06 18:01:02 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/06 18:26:21 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	ft_julia_init(t_graph *grp)
 {
 	grp->f = &ft_pixel_julia;
 	grp->f_origin = &ft_origin_julia;
-	grp->f_mouse = NULL;
 	grp->f_motion = &ft_julia_modifier;
 	grp->width = WIDTH;
 	grp->height = HEIGHT;

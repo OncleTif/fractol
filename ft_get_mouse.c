@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/12 17:05:38 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/05 18:58:28 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/06 18:21:43 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,9 @@ int	ft_get_mouse(int btn, int x, int y, void *obj)
 	grp->y_orig = y;
 	grp->r_orig = grp->c_r;
 	grp->i_orig = grp->c_i;
-	ft_putnbr(btn);
-	if (btn == 1)
+	if (btn == 1 || btn == 4 || btn == 6)
 		ft_zoom_in(grp);
-	else if (btn == 2)
+	else if (btn == 2 || btn == 5 || btn == 7)
 		ft_zoom_out(grp);
 	else
 		ft_draw_frac(grp);

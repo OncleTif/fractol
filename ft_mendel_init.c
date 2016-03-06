@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/05 15:07:51 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/06 16:48:00 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/06 18:26:08 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	ft_mendel_init(t_graph *grp)
 {
 	grp->f = &ft_pixel_mendel;
 	grp->f_origin = &ft_origin_mendel;
-	grp->f_mouse = &ft_get_mouse;
 	grp->width = WIDTH;
 	grp->height = HEIGHT;
 	grp->x_orig = grp->width / 2;
