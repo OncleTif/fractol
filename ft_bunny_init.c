@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/06 18:37:14 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/06 18:57:32 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/06 20:29:39 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ void	ft_bunny_init(t_graph *grp)
 	grp->r_max = 1;
 	grp->i_min = -1.2;
 	grp->i_max = 1.2;
-	grp->iter_init = 150;
-	grp->iter = 150;
+	grp->iter_init = 50;
+	grp->iter = 50;
 	grp->color_min.color = 0x00000000;
 	grp->color_max.color = 0x00FF3333;
 	grp->julia_r = -0.123;
