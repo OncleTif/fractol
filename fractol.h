@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 18:50:07 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/06 16:46:28 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/06 17:49:34 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@
 # define MENDEL 0
 # define BUTTON_NOTIFY 4
 # define MOTION_NOTIFY 6
+# define POINTERWINDOW 0L
 # define POINTER_MOTION_MASK (1L<<6)
+# define POINTER_MOTION_HINT_MASK (1L<<7)
 # define BUTTON1_MOTION_MASK (1L<<8)
 
 typedef union		u_color
@@ -63,6 +65,7 @@ typedef struct		s_graph
 	t_color			color_max;
 	void			(*f)(struct s_graph*, int, int);
 	void			(*f_origin)(struct s_graph*);
+	void			(*f_motion)(struct s_graph*, int, int);
 	int				(*f_mouse)(int, int, int, void*);
 }					t_graph;
 
@@ -93,10 +96,12 @@ void				ft_text(t_graph *grp);
 int					ft_get_key(int key, void *obj);
 int					ft_expose(void *obj);
 int					ft_limiter(int x, int y, t_graph *grp);
+void				ft_julia_modifier(t_graph *grp, int x, int y);
 void				ft_draw_frac(t_graph *grp);
 void				ft_pixel_mendel(t_graph *grp, int x, int y);
 void				ft_pixel_julia(t_graph *grp, int x, int y);
 int					ft_get_mouse(int btn, int x, int y, void *obj);
+int					ft_get_motion(int x, int y, void *obj);
 void				ft_print_origin(t_graph *grp);
 void				ft_mendel_init(t_graph *grp);
 void				ft_julia_init(t_graph *grp);

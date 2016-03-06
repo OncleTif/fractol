@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/03/05 20:28:50 by tmanet           ###   ########.fr        #
+#    Updated: 2016/03/06 17:50:28 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ SRC =   main.c \
 		ft_print_origin.c \
 		ft_get_key.c \
 		ft_get_mouse.c \
+		ft_get_motion.c \
 		ft_expose.c \
 		ft_move_dwn.c \
 		ft_move_lft.c \
@@ -50,6 +51,7 @@ SRC =   main.c \
 		ft_coordinate.c \
 		ft_mendel_init.c \
 		ft_julia_init.c \
+		ft_julia_modifier.c \
 		ft_pixel_mendel.c
 
 
